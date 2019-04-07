@@ -1,18 +1,10 @@
 var ical = require('node-ical');
 var fs = require('fs');
 var moment = require("moment");
+var colors = require("./colors");
 var fileName = "Umweltkalender_Baden-Baden.ics"
 var outFileName = "garbage_schedule.csv"
 
-//Define Colors for the different bins
-var colors = {
-    "Gelbe Tonne": "yellow",
-    "Biotonne": "chocolate",
-    "Restmüll": "gray",
-    "Altpapiersammlung": "cornflowerblue",
-    "Sondermüll": "red",
-    "Gartenabfälle": "green"
-};
 
 var groupBy = function (xs, key) {
     return xs.reduce(function (rv, x) {
